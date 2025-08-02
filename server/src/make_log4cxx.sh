@@ -3,7 +3,7 @@
 # date: 03/24/2015
 
 LOG4CXX=apache-log4cxx-0.10.0
-LOG4CXX_PATH=https://archive.apache.org/dist/logging/log4cxx/0.10.0/$LOG4CXX.tar.gz`
+LOG4CXX_PATH=https://archive.apache.org/dist/logging/log4cxx/0.10.0/$LOG4CXX.tar.gz
 CUR_DIR=
 download() {
     if [ -f "$1" ]; then
@@ -99,4 +99,3 @@ build_log4cxx(){
 check_user
 get_cur_dir
 build_log4cxx
-
