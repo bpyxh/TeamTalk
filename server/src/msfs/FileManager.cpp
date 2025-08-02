@@ -227,7 +227,8 @@ void FileManager::updateMapCache() {
 	size_t currSize = m_map.size();
 	if (currSize > MAX_FILE_IN_MAP) {
 		EntryMap::iterator it = m_map.begin();
-		int times = abs(MAX_FILE_IN_MAP - currSize);
+		// int times = abs(MAX_FILE_IN_MAP - currSize);
+        int times = abs(static_cast<long long int>(MAX_FILE_IN_MAP - currSize))
 		while (it != m_map.end() && times) {
 			delete it->second;
 			m_map.erase(it++);
