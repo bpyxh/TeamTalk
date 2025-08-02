@@ -144,23 +144,23 @@ build() {
     mkdir -p ../run/db_proxy_server
 
 	#copy executables to run/ dir
-	cp login_server/login_server ../run/login_server/
+	cp bin/login_server ../run/login_server/
 
-	cp route_server/route_server ../run/route_server/
+	cp bin/route_server ../run/route_server/
 
-	cp msg_server/msg_server ../run/msg_server/
+	cp bin/msg_server ../run/msg_server/
 
-    cp http_msg_server/http_msg_server ../run/http_msg_server/
+    cp bin/http_msg_server ../run/http_msg_server/
 
-    cp file_server/file_server ../run/file_server/
+    cp bin/file_server ../run/file_server/
 
-    cp push_server/push_server ../run/push_server/
+    cp bin/push_server ../run/push_server/
 
-    cp db_proxy_server/db_proxy_server ../run/db_proxy_server/
+    cp bin/db_proxy_server ../run/db_proxy_server/
 
-    cp msfs/msfs ../run/msfs/
+    cp bin/msfs ../run/msfs/
 
-    cp tools/daeml ../run/
+    cp bin/daeml ../run/
 
     build_version=im-server-$1
     build_name=$build_version.tar.gz
@@ -179,27 +179,27 @@ build() {
     mkdir -p ../$build_version/lib
 
     cp login_server/loginserver.conf ../$build_version/login_server/
-    cp login_server/login_server ../$build_version/login_server/
+    cp bin/login_server ../$build_version/login_server/
 
-    cp route_server/route_server ../$build_version/route_server/
+    cp bin/route_server ../$build_version/route_server/
     cp route_server/routeserver.conf ../$build_version/route_server/
 
-    cp msg_server/msg_server ../$build_version/msg_server/
+    cp bin/msg_server ../$build_version/msg_server/
     cp msg_server/msgserver.conf ../$build_version/msg_server/
 
-    cp http_msg_server/http_msg_server ../$build_version/http_msg_server/
+    cp bin/http_msg_server ../$build_version/http_msg_server/
     cp http_msg_server/httpmsgserver.conf ../$build_version/http_msg_server/
 
-    cp file_server/file_server ../$build_version/file_server/
+    cp bin/file_server ../$build_version/file_server/
     cp file_server/fileserver.conf ../$build_version/file_server/
 
-    cp push_server/push_server ../$build_version/push_server/
+    cp bin/push_server ../$build_version/push_server/
     cp push_server/pushserver.conf ../$build_version/push_server/
 
-    cp db_proxy_server/db_proxy_server ../$build_version/db_proxy_server/
+    cp bin/db_proxy_server ../$build_version/db_proxy_server/
     cp db_proxy_server/dbproxyserver.conf ../$build_version/db_proxy_server/
 
-    cp msfs/msfs ../$build_version/msfs/
+    cp bin/msfs ../$build_version/msfs/
     cp msfs/msfs.conf.example ../$build_version/msfs/
 
     cp slog/log4cxx.properties ../$build_version/lib/
@@ -207,7 +207,7 @@ build() {
     cp -a slog/lib/liblog4cxx.so* ../$build_version/lib/
     cp sync_lib_for_zip.sh ../$build_version/
 
-    cp tools/daeml ../$build_version/
+    cp bin/daeml ../$build_version/
     cp ../run/restart.sh ../$build_version/
 
     cd ../
