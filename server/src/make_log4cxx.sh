@@ -99,3 +99,4 @@ build_log4cxx(){
 check_user
 get_cur_dir
 build_log4cxx
+
