@@ -26,7 +26,8 @@ check_user() {
 }
 
 check_os() {
-	OS_VERSION=$(less /etc/redhat-release)
+	#OS_VERSION=$(less /etc/redhat-release)
+    OS_VERSION="CentOS 7"
 	OS_BIT=$(getconf LONG_BIT)
 	#echo "$OS_VERSION, $OS_BIT bit..." 
 	if [[ $OS_VERSION =~ "CentOS" ]]; then
