@@ -1,0 +1,13 @@
+
+win-client/bin/teamtalk/Debug/
+win-client/bin/teamtalk/Release/
+win-client/lib/
+win-client/obj/
+
+*.ipch
+*.sdf
+*.opensdf
+*.suo
+*.tlb
+
+win-client/**/*.log

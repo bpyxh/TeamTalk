@@ -92,7 +92,8 @@
       <InterfaceIdentifierFileName>GifSmiley_i.c</InterfaceIdentifierFileName>
     </Midl>
     <PostBuildEvent>
-      <Command>Regsvr32.exe /s "$(SolutionDir)\..\bin\teamtalk\$(Configuration)\GifSmiley.dll"</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
     <ResourceCompile>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -141,7 +142,8 @@
       <InterfaceIdentifierFileName>GifSmiley_i.c</InterfaceIdentifierFileName>
     </Midl>
     <PostBuildEvent>
-      <Command>Regsvr32.exe /s "$(SolutionDir)\..\bin\teamtalk\$(Configuration)\GifSmiley.dll"</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
     <ResourceCompile>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>

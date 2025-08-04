@@ -29,6 +29,10 @@ void DoLoginServerHttpOperation::processOpertion()
 	pPamram->resMsg = util::getMultilingual()->getStringById(_T("STRID_LOGINDIALOG_LOGIN_HTTP_DEFERROR"));
 	Http::HttpResponse	response;
 	Http::HttpClient	client;
+	//:)// 设置代理
+	Http::ProxyConfig proxy_config(Http::ProxyType::PROXY_HTTP, 
+		"127.0.0.1", 10809);
+	client.setProxy(&proxy_config);
     //对于登录：url=http://192.168.226.128:8080/msg_server
 	Http::HttpRequest	request("get", url);
 	if (!client.execute(&request, &response))
