@@ -1,11 +1,6 @@
 #!/bin/bash
 
 build() {
-    yum -y install cmake
-    yum -y install libuuid-devel
-    yum -y install openssl-devel
-    yum -y install curl-devel
-
 	echo "#ifndef __VERSION_H__" > base/version.h
 	echo "#define __VERSION_H__" >> base/version.h
 	echo "#define VERSION \"$1\"" >> base/version.h
