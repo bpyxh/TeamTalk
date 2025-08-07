@@ -49,6 +49,15 @@ bool CInterLoginStrategy::doLogin(const std::string &strName, const std::string 
             string strOutPass(szMd5);
             //去掉密码校验
             //if(strOutPass == strResult)
+
+            //:)// 因为下面没有判断密码，然后在增加账号的时候没有考虑设置status，所以导致执行sql时获取不到数据，
+            //:)// 然后下面没有判断密码，就导致返回了空数据，并且结果还是成功的。导致客户端误以为登录成功。
+            //:)// 这里判断下如果密码为空，就返回错误。
+            if (strResult.empty())
+            {
+                bRet = false;
+            }
+            else
             {
                 bRet = true;
                 user.set_user_id(nId);
@@ -61,8 +70,7 @@ bool CInterLoginStrategy::doLogin(const std::string &strName, const std::string 
                 user.set_avatar_url(strAvatar);
                 user.set_department_id(nDeptId);
                 user.set_status(nStatus);
-  	        user.set_sign_info(strSignInfo);
-
+  	            user.set_sign_info(strSignInfo);
             }
             delete  pResultSet;
         }
